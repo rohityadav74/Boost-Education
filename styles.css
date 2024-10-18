@@ -1,0 +1,236 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+  }
+  
+  /* Sticky Navbar */
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: #004080;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  nav .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  nav .logo span {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #003060;
+    border-radius: 5px;
+  }
+  
+  /* Home Section */
+  .home-section {
+    height: 100vh;
+    background: url('education-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .home-section h1 {
+    color: white;
+    font-size: 48px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Feature Section */
+  .feature-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+  
+  .feature-section h2 {
+    margin-bottom: 30px;
+    font-size: 36px;
+  }
+  
+  /* Horizontal Flexbox for Features */
+  .features {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centering items */
+  }
+  
+  .feature {
+    flex: 1;
+    max-width: 220px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .feature:hover {
+    transform: scale(1.05);
+  }
+  
+  .feature h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .feature p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Feature Button */
+  .feature-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .feature-btn:hover {
+    background-color: #003060;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  /* Login Page */
+  .login-page {
+    height: 100vh;
+    background: url('login-background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+  }
+  
+  /* Login Options - Flex Layout */
+  .login-container .login-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Wrapping on smaller screens */
+  }
+  
+  .login-container .login-option {
+    background-color: #004080;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 30%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-container .login-option:hover {
+    background-color: #003060;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      background-color: #004080;
+      position: absolute;
+      top: 60px;
+      left: -100%;
+      width: 100%;
+      transition: 0.3s;
+    }
+  
+    nav ul li {
+      margin: 15px 0;
+    }
+  
+    nav ul.show {
+      left: 0;
+    }
+  
+    /* Features wrap in small devices */
+    .features {
+        display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centering items on small screens */
+      align-items: center;
+    }
+  
+    /* Login options wrap in small devices */
+    .login-container .login-options {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .login-container .login-option {
+      width: 100%;
+    }
+  }
+  
